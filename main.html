@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<style>
+			table, th, td {
+				background-color: #2b2b2b;
+				border: 1px solid #ff4040;
+				color: #ffffd1;
+			}
+			input {
+				background-color: #562b2b;
+				color: #ffffd1;
+			}
+			button {
+				background-color: #404040;
+				border: 3px solid #ff4040;
+				color: #ffffd1;
+			}
+		</style>
+	</head>
+	<body style="background-color:#404040;">
+		<center>
+		<h1 style="color: #ffffd1;">The <a style="color: #ffffd1;" href="https://chesscraft.ca">ChessCraft</a> Piece Library!</h1>
+			<table style="width:816px">
+				<tr>
+					<th style="width:25%">Strength</th>
+					<th style="width:25%">Rook</th>
+					<th style="width:25%">Bishop</th>
+					<th>Knight</th>
+				</tr>
+			</table>
+			<button id="strength" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
+			<button id="rook" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
+			<button id="bishop" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
+			<button id="knight" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
+			<table style="width:816px">			
+				<tr>
+					<th style="width:25%">Forwardness</th>
+					<th style="width:25%">Wideness</th>
+					<th style="width:25%">Move/Capture</th>
+					<th style="width:25%">Left/Right</th>
+				</tr>
+			</table>
+			<button id="forwardness" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
+			<button id="wideness" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
+			<button id="move/captr" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
+			<button id="left/right" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
+			<h2 style="color:#ffffd1;">The Rules</h2>
+			<img src="images/2-pawn.png" alt="double advance" style="width:120px;height:120px">
+			<button id="button2" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/3-pawn.png" alt="triple advance" style="width:120px;height:120px;">
+			<button id="button3" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/4-pawn.png" alt="quadruple advance" style="120px;height:120px">
+			<button id="button4" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/en-passant.png" alt="en passant" style="width:120px;height:120px">
+			<button id="buttone" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/kingcastle.png" alt="king castle" style="width:120px;height:120px">
+			<button id="buttonk" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/rookcastle.png" alt="rook castle" style="width:120px;height:120px">
+			<button id="buttonr" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/check.png" alt="check" style="width:120px;height:120px">
+			<button id="buttonc" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/iron.png" alt="iron" style="width:120px;height:120px">
+			<button id="buttoni" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/range.png" alt="range" style="width:120px;height:120px">
+			<button id="buttonra" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/pacifism.png" alt="pacifism" style="width:120px;height:120px">
+			<button id="buttonp" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/anchor.png" alt="anchor" style="width:120px;height:120px">
+			<button id="buttona" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/trojan.png" alt="trojan" style="width:120px;height:120px">
+			<button id="buttont" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/medusa.png" alt="medusa" style="width:120px;height:120px">
+			<button id="buttonm" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/angel.png" alt="angel" style="width:120px;height:120px">
+			<button id="buttonan" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/ahimsa.png" alt="ahimsa" style="width:120px;height:120px">
+			<button id="buttonah" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+			<img src="images/cannon.png" alt="cannon" style="width:120px;height:120px">
+			<button id="buttonca" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
+		</center>
+		<script type="text/javascript">
+			function func1 (event) {
+				var code = ('which' in event) ? event.which : event.code ;
+				chknum = (code >= 48 && code <= 57) || (code >= 96 && code <= 105 ) || (code == 8);
+				mod = ( event.altKey || event.ctrlKey|| event.shiftKey ) ;
+				return chknum;
+			}
+			function func2 (event) {
+				element = document.activeElement.innerHTML;
+				if (element == "Off") {
+					document.activeElement.innerHTML = "On";
+				}
+				else {
+					document.activeElement.innerHTML = "Off";
+				}
+			}
+			var varclick = 0;
+			var px;
+			function funDown() {
+				varclick = 1;
+			}
+			function funUp(e) {
+				if (varclick == 1) {
+					varclick = 0;
+					px = e.offsetX + 4;
+					document.activeElement.innerHTML = px / 2;
+				}
+			}
+			function funMouse(e) {
+				if (varclick == 1) {
+					px = e.offsetX + 4;
+					document.activeElement.innerHTML = px / 2;
+				}
+			}
+		</script>
+	</body>
+</html>
