@@ -4,23 +4,42 @@
 			table, th, td {
 				background-color: #2b2b2b;
 				border: 1px solid #ff4040;
-				color: #ffffd1;
+				color: #ffe8d1;
 			}
 			input {
-				background-color: #562b2b;
-				color: #ffffd1;
+				color: #ffe8d1;
 			}
 			button {
-				background-color: #404040;
+				background-color: #ffffff00;
 				border: 3px solid #ff4040;
-				color: #ffffd1;
+				color: #ffe8d1;
+			}
+			.container {
+				width: 12.67%;
+				height: 16px;
+			}
+
+			.container .btn {
+				width: 100%;
+  				background-color: #55555500;
+  				color: #ffffff00;
+  				font-size: 16px;
+  				border: 5px solid #000000;
+				border-radius: 5px;
+  				cursor: pointer;
+			}
+
+
+			.container img {
+				width: 4.2%;
+				height: 22px;
 			}
 		</style>
 	</head>
 	<body style="background-color:#404040;">
 		<center>
-		<h1 style="color: #ffffd1;">The <a style="color: #ffffd1;" href="https://chesscraft.ca">ChessCraft</a> Piece Library!</h1>
-			<table style="width:816px">
+			<h1 style="color: #ffe8d1;">The <a style="color: #ffe8d1;" href="https://chesscraft.ca">ChessCraft</a> Piece Library!</h1>
+			<table style="width:53.125%;margin-bottom:3px">
 				<tr>
 					<th style="width:25%">Strength</th>
 					<th style="width:25%">Rook</th>
@@ -28,11 +47,23 @@
 					<th>Knight</th>
 				</tr>
 			</table>
-			<button id="strength" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
-			<button id="rook" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
-			<button id="bishop" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
-			<button id="knight" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
-			<table style="width:816px">			
+			<div class="container" style="transform: translate(-159%, -2px)">
+				<img id="strengthimg" src="piece library/images/slider.png" style="transform: translate(0%, 4px)">
+				<button id="strength" class="btn" onmousedown = "funStrength(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="transform: translate(0px, -22px)">50</button>
+			</div>
+			<div class="container" style="transform: translate(-53%, -18px)">
+				<img id="rookimg" src="piece library/images/slider.png" style="transform: translate(0%, 4px)">
+				<button id="rook" class="btn" onmousedown = "funRook(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="transform: translate(0px, -22px)">50</button>
+			</div>
+			<div class="container" style="transform: translate(53%, -34px)">
+				<img id="bishopimg" src="piece library/images/slider.png" style="transform: translate(0%, 4px)">
+				<button id="bishop" class="btn" onmousedown = "funBishop(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="transform: translate(0px, -22px)">50</button>
+			</div>
+			<div class="container" style="transform: translate(159%, -50px)">
+				<img id="knightimg" src="piece library/images/slider.png" style="transform: translate(0%, 4px)">
+				<button id="knight" class="btn" onmousedown = "funKnight(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="transform: translate(0px, -22px)">50</button>
+			</div>
+			<table style="width:53.125%;margin-bottom:3px">		
 				<tr>
 					<th style="width:25%">Forwardness</th>
 					<th style="width:25%">Wideness</th>
@@ -40,16 +71,28 @@
 					<th style="width:25%">Left/Right</th>
 				</tr>
 			</table>
-			<button id="forwardness" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
-			<button id="wideness" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
-			<button id="move/captr" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
-			<button id="left/right" onmousedown = "funDown(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="width:200px">50</button>
-			<h2 style="color:#ffffd1;">The Rules</h2>
+			<div class="container" style="transform: translate(-159%, -2px)">
+				<img id="forwardimg" src="piece library/images/slider.png" style="transform: translate(0%, 4px)">
+				<button id="forwardness" class="btn" onmousedown = "funForward(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="transform: translate(0px, -22px)">50</button>
+			</div>
+			<div class="container" style="transform: translate(-53%, -18px)">
+				<img id="wideimg" src="piece library/images/slider.png" style="transform: translate(0%, 4px)">
+				<button id="wideness" class="btn" onmousedown = "funWide(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="transform: translate(0px, -22px)">50</button>
+			</div>
+			<div class="container" style="transform: translate(53%, -34px)">
+				<img id="moveimg" src="piece library/images/slider.png" style="transform: translate(0%, 4px)">
+				<button id="move/captr" class="btn" onmousedown = "funMove(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="transform: translate(0px, -22px)">50</button>
+			</div>
+			<div class="container"style="transform: translate(159%, -50px)">
+				<img id="sideimg" src="piece library/images/slider.png" style="transform: translate(0%, 4px)">
+				<button id="left/right" class="btn" onmousedown = "funSide(event)" onmousemove = "funMouse(event)" onclick = "funUp(event)" onmouseout = "funUp(event)" style="transform: translate(0px, -22px)">50</button>
+			</div>
+			<h2 style="color:#ffe8d1;">The Rules</h2>
 			<img src="images/2-pawn.png" alt="double advance" style="width:120px;height:120px">
 			<button id="button2" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
 			<img src="images/3-pawn.png" alt="triple advance" style="width:120px;height:120px;">
 			<button id="button3" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
-			<img src="images/4-pawn.png" alt="quadruple advance" style="120px;height:120px">
+			<img src="images/4-pawn.png" alt="quadruple advance" style="width:120px;height:120px">
 			<button id="button4" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
 			<img src="images/en-passant.png" alt="en passant" style="width:120px;height:120px">
 			<button id="buttone" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
@@ -79,12 +122,6 @@
 			<button id="buttonca" onclick=" return func2(event)" style="width:120px;margin-left:-124px">Off</button>
 		</center>
 		<script type="text/javascript">
-			function func1 (event) {
-				var code = ('which' in event) ? event.which : event.code ;
-				chknum = (code >= 48 && code <= 57) || (code >= 96 && code <= 105 ) || (code == 8);
-				mod = ( event.altKey || event.ctrlKey|| event.shiftKey ) ;
-				return chknum;
-			}
 			function func2 (event) {
 				element = document.activeElement.innerHTML;
 				if (element == "Off") {
@@ -95,21 +132,65 @@
 				}
 			}
 			var varclick = 0;
-			var px;
-			function funDown() {
+			var pox;
+			function funStrength() {
+				corimage = strengthimg;
 				varclick = 1;
 			}
+			function funRook() {
+				corimage = rookimg;
+				varclick = 1;
+			}
+			function funBishop() {
+				corimage = bishopimg;
+				varclick = 1;
+			}
+			function funKnight() {
+				corimage = knightimg;
+				varclick = 1;
+			}
+			function funForward() {
+				corimage = forwardimg;
+				varclick = 1;
+			}
+			function funWide() {
+				corimage = wideimg;
+				varclick = 1;
+			}
+			function funMove() {
+				corimage = moveimg;
+				varclick = 1;
+			}
+			function funSide() {
+				corimage = sideimg;
+				varclick = 1;
+			}
+			outwidth = window.innerWidth;
 			function funUp(e) {
 				if (varclick == 1) {
+					outwidth = window.innerWidth;
 					varclick = 0;
-					px = e.offsetX + 4;
-					document.activeElement.innerHTML = px / 2;
+					pox = e.offsetX + 8;
+					if ((Math.round((((pox / (outwidth / 1536)) / 2 - 50) * 1.19) + 50)) <= 100 & (Math.round((((pox / (outwidth / 1536)) / 2 - 50) * 1.19) + 50)) >= 0) {
+						document.activeElement.innerHTML = Math.round((((pox / (outwidth / 1536)) / 2 - 50) * 1.19) + 50);
+						corimage.style.transform = "translate(" + Math.round((((pox) / (outwidth / 1536)) / 2 - 50) * 25) + "%, 4px)";
+					}
+					//if ((((pox) / (outwidth / 1536)) / 2 - 50) * 25 <= 1049 & (((pox) / (outwidth / 1536)) / 2 - 50) * 25 >= -1057) {
+					//	corimage.style.transform = "translate(" + Math.round((((pox) / (outwidth / 1536)) / 2 - 50) * 25) + "%, 4px)";
+					//}
 				}
 			}
 			function funMouse(e) {
 				if (varclick == 1) {
-					px = e.offsetX + 4;
-					document.activeElement.innerHTML = px / 2;
+					outwidth = window.innerWidth;
+					pox = e.offsetX + 8;
+					if ((Math.round((((pox / (outwidth / 1536)) / 2 - 50) * 1.19) + 50)) <= 100 & (Math.round((((pox / (outwidth / 1536)) / 2 - 50) * 1.19) + 50)) >= 0) {
+						document.activeElement.innerHTML = Math.round((((pox / (outwidth / 1536)) / 2 - 50) * 1.19) + 50);
+						corimage.style.transform = "translate(" + Math.round((((pox) / (outwidth / 1536)) / 2 - 50) * 25) + "%, 4px)";
+					}
+					//if ((((pox) / (outwidth / 1536)) / 2 - 50) * 25 <= 1049 & (((pox) / (outwidth / 1536)) / 2 - 50) * 25 >= -1057) {
+					//	corimage.style.transform = "translate(" + Math.round((((pox) / (outwidth / 1536)) / 2 - 50) * 25) + "%, 4px)";
+					//}
 				}
 			}
 		</script>
