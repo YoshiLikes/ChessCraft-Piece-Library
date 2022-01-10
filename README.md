@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+	<head>
 		<style>
 			table, th, td {
 				background-color: #2b2b2b;
@@ -371,3 +374,5 @@
 				document.getElementById('botrow').style.marginTop = outwidth / 8 - outwidth / 4
 			}, 1);
 		</script>
+	</body>
+</html>
