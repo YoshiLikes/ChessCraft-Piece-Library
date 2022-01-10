@@ -1,0 +1,1 @@
+A simple utility for finding pieces to use in ChessCraft.
